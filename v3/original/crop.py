@@ -14,5 +14,11 @@ def crop_image():
         cv2.imwrite(f'onestage/{i}.png', img)
 
 
+def rename_images():
+    for i in range(0, N):
+        # from i_0_out.png to i.png:
+        os.rename(f'onestage/rgb/{i}_0_out.png', f'onestage/rgb/{i}.png')
+
+
 if __name__ == '__main__':
-    crop_image()
+    rename_images()
